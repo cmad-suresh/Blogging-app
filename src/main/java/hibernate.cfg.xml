@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+ 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+  <session-factory>
+    
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Library</property>
+    <property name="hibernate.connection.username">Library</property>
+    <property name="hibernate.connection.password">library123</property>
+        
+    <!-- SQL Dialect -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+           
+    <!-- Echo all executed SQL commands to stdout -->
+    <property name="show_sql">true</property>
+    
+    <!-- Drop and re-create the database schema on startup -->
+    <property name="hbm2ddl.auto">create</property>
+    
+    <!-- Names the annotated entity class -->
+    <!-- <mapping class="test.person" file="" jar="" package="" resource="person.hbm.xml"/> -->
+    <!-- <mapping class="com.library.data.entities.Books"/> -->
+    <mapping class="com.library.data.entities.UserDetails"/>
+     <mapping class="com.library.data.entities.Vehicles"/>
+    <!-- <mapping class="com.library.data.entities.Authors"/> -->
+    
+    
+  </session-factory>
+  
+</hibernate-configuration>
