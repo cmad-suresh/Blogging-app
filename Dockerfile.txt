@@ -1,0 +1,3 @@
+FROM tomcat:latest
+ADD *.jar /usr/local/tomcat/webapps/hibernate-practice.jar
+ADD setenv.sh /usr/local/tomcat/bin/setenv.sh
